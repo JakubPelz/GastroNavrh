@@ -1,44 +1,54 @@
-import DailyMenu from "./DailyMenu";
-import Economics from "./Economics";
-import MainPage from "./MainPage";
-import Minutes from "./Minutes";
-import Orders from "./Orders";
-import Pizza from "./Pizza";
-import Settings from "./Settings";
-import Users from "./Users";
+import DailyMenu from './DailyMenu';
+import Economics from './Economics';
+import MainPage from './MainPage';
+import Minutes from './Minutes';
+import Orders from './Orders';
+import Pizza from './Pizza';
+import Settings from './Settings';
+import Users from './Users';
+import Receptury from './Receptury';
+import Moduls from './Moduls';
 
 const DashBoardRoutes = [
     {
-        name: "Hlavní stránka",
+        name: 'Hlavní stránka',
         component: MainPage,
     },
     {
-        name: "Denní menu",
+        name: 'Receptury',
+        component: Receptury,
+    },
+    {
+        name: 'Denní menu',
         component: DailyMenu,
     },
     {
-        name: "Minutky",
+        name: 'Minutky',
         component: Minutes,
     },
     {
-        name: "Pizza",
+        name: 'Pizza',
         component: Pizza,
     },
     {
-        name: "Objednávky",
+        name: 'Objednávky',
         component: Orders,
     },
 
     {
-        name: "Uživatelé",
+        name: 'Uživatelé',
         component: Users,
     },
     {
-        name: "Ekonomika",
+        name: 'Ekonomika',
         component: Economics,
     },
     {
-        name: "nastavení",
+        name: 'Moduly',
+        component: Moduls,
+    },
+    {
+        name: 'nastavení',
         component: Settings,
     },
 ];

@@ -11,8 +11,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { NavLink } from 'react-router-dom';
+import routes from '../routes/Routes';
 
 const pages = ['Web restaurace', 'kasa'];
+const pagesRoutes = ['web-restaurace', 'kasa'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -110,14 +113,20 @@ const ResponsiveAppBar = () => {
                             display: { xs: 'none', md: 'flex' },
                         }}
                     >
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
+                        {routes.map((page) => (
+                            <NavLink to={page.path}>
+                                <Button
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{
+                                        my: 2,
+                                        color: 'white',
+                                        display: 'block',
+                                    }}
+                                >
+                                    {page.name}
+                                </Button>
+                            </NavLink>
                         ))}
                     </Box>
 
